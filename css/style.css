@@ -4,6 +4,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul,
@@ -78,36 +79,35 @@ button:hover {
 
 .main>li>a {
     display: block;
-    width: 200px;
+    width: 180px;
     height: 50px;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 50px;
     font-weight: bold;
     color: #00ccff;
 }
 
 .sub {
-    width: 200px;
-    display: inline-block;
+    width: 180px;
     position: absolute;
-    top: 100px;
+    top: 60px;
     left: 0;
-    border: 2px solid #00ccff;
-    border-top: none;
     display: none;
 }
 
 .sub li a {
-    width: 200px;
     height: 50px;
     font-size: 20px;
     line-height: 50px;
     display: block;
-    background-color: white;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6)
 }
 
 .sub li:hover a {
-    color: #00ccff
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #00ccff;
+    font-weight: bold;
 }
 
 .m_menu_btn {
@@ -146,7 +146,6 @@ button:hover {
     margin: 30px 0 60px 0;
 }
 
-
 /* 슬라이드 */
 
 .slide {
@@ -158,8 +157,6 @@ button:hover {
     height: 600px;
     position: relative;
 }
-
-
 
 .move .slick-dots {
     position: absolute;
@@ -212,7 +209,6 @@ button:hover {
     background-position: -30px 0;
 }
 
-
 /* 매장찾기 */
 
 .location {
@@ -255,7 +251,6 @@ button:hover {
 .location ul li .cover:hover {
     opacity: 1;
 }
-
 
 .location ul li a img {
     display: block;
@@ -341,12 +336,10 @@ button:hover {
     background-image: url("../img/fran_bg.png");
 }
 
-
 .franchise ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .franchise ul li {
@@ -368,7 +361,6 @@ button:hover {
     opacity: 1;
     transform: scale(1);
 }
-
 
 .franchise ul li img {
     position: absolute;
@@ -403,20 +395,18 @@ button:hover {
 
 .f_inner {
     width: 1200px;
-    height: 200px;
     margin: 0 auto;
-    background-color: gray;
+    padding: 30px;
 }
 
 .f_logo {
-    margin: 30px;
     float: left;
 }
 
 .f_menu {
     float: left;
-    margin: 30px;
-    color: white
+    color: white;
+    margin-left: 20px;
 }
 
 .f_menu ul li {
@@ -440,11 +430,10 @@ button:hover {
     display: none;
 }
 
-
 .f_call {
     float: right;
-    margin: 30px;
     color: deepskyblue;
+    font-weight: bold;
 }
 
 /* sns */
@@ -452,24 +441,32 @@ button:hover {
 .sns {
     position: fixed;
     z-index: 50;
-    right: -64px;
+    right: 0;
     bottom: 0;
-}
-
-.sns ul {}
-
-.sns ul li {
-    /* margin: 10px 0; */
 }
 
 .sns ul li a img {
     width: 50%;
 }
 
-.popup{position: absolute;top: 50px;left: 30%;z-index: 200;}
-.close{background-color: white;padding: 5px;position: absolute;bottom: 20px;right: 20px;}
+.popup {
+    position: absolute;
+    top: 50px;
+    left: 25%;
+    z-index: 9;
+}
+
+.close {
+    background-color: white;
+    padding: 5px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
 /* 반응형 */
-@media screen and (min-width: 320px) and (max-width:639px) {
+
+@media screen and (max-width:768px) {
     body {
         width: 100vw;
     }
@@ -501,7 +498,6 @@ button:hover {
 
     .move li a img {
         width: 100vw;
-
     }
 
     .m_menu_btn {
@@ -543,7 +539,6 @@ button:hover {
         line-height: 42px;
         font-weight: bold;
     }
-    .m_sub{}
 
     .m_sub li {
         font-size: 18px;
@@ -551,7 +546,9 @@ button:hover {
         font-weight: normal;
     }
 
-    .m_menu.on {right: 0;}
+    .m_menu.on {
+        right: 0;
+    }
 
     .m_menu_bg {
         background-color: rgba(0, 0, 0, .5);
@@ -576,7 +573,6 @@ button:hover {
         margin: 0 auto;
     }
 
-
     .location ul li,
     .location ul li .cover {
         width: 30vw;
@@ -591,7 +587,6 @@ button:hover {
         width: 30vw;
         font-size: 11px;
     }
-
 
     .location button {
         right: 5vw;
@@ -664,19 +659,19 @@ button:hover {
     }
 
 
+
+
     /* footer */
     #footer {
         width: 100vw;
-
     }
 
     .f_inner {
         width: 100vw;
-        padding: 5vw;
+        padding: 5vw 0;
         height: auto;
         text-align: center;
         box-sizing: border-box;
-        font-size: 11px;
     }
 
     .f_logo {
@@ -686,11 +681,16 @@ button:hover {
 
     .f_menu {
         float: none;
+        font-size: 14px;
     }
 
     .f_call {
         margin: 0 auto;
         float: none;
         font-size: large;
+    }
+
+    .sns {
+        width: 30%;
     }
 }
