@@ -598,7 +598,7 @@ button:hover {
     .guide {
         width: 100vw;
         height: auto;
-        padding: 5vw+;
+        padding: 5vw;
         box-sizing: border-box;
     }
 
@@ -637,7 +637,7 @@ button:hover {
     /* 창업안내 */
     .franchise {
         width: 100vw;
-        padding: 5vw+;
+        padding: 5vw;
         box-sizing: border-box;
         height: fit-content;
 
@@ -654,22 +654,16 @@ button:hover {
         margin-bottom: 50px;
     }
 
-    .franchise ul li h3 {
-        font-size: 16px;
-    }
-
-
-
 
     /* footer */
     #footer {
         width: 100vw;
+        height: fit-content;
     }
 
     .f_inner {
         width: 100vw;
         padding: 5vw 0;
-        height: auto;
         text-align: center;
         box-sizing: border-box;
     }
@@ -685,12 +679,14 @@ button:hover {
     }
 
     .f_call {
-        margin: 0 auto;
+        margin: 20px auto 0 auto;
         float: none;
         font-size: large;
     }
 
     .sns {
         width: 30%;
+        position:fixed;
+        right:-15%;
     }
 }
